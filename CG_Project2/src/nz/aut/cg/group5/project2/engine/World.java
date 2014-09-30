@@ -26,7 +26,7 @@ public class World  implements GLEventListener{
 	private float upZ = 0;
 	private float[] angleRotate = {0.0001f,0.0001f,0};
 	private float changesY = 0.01f;
-	private ObjectLoader cube = new ObjectLoader("C:\\temp\\monkey.obj");
+	private ObjectLoader cube = new ObjectLoader("obj\\conecircle.obj");
 	private float[] cubeCoords = {3,3,3};
 
 
