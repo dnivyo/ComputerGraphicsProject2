@@ -15,9 +15,9 @@ public class World  implements GLEventListener{
 	private  Animator theAnimator;
 
 	// for look at
-	private float eyeX = 15;
-	private float eyeY = 0;
-	private float eyeZ = 15;
+	private float eyeX = -25;
+	private float eyeY = 10;
+	private float eyeZ = 0;
 	private float atX = 0;
 	private float atY = 0;
 	private float atZ = 0;
@@ -26,7 +26,7 @@ public class World  implements GLEventListener{
 	private float upZ = 0;
 	private float[] angleRotate = {0.0001f,0.0001f,0};
 	private float changesY = 0.01f;
-	private ObjectLoader cube = new ObjectLoader("obj\\conecircle.obj");
+	private ObjectLoader cube = new ObjectLoader("obj\\yellowishcube.obj");
 	private float[] cubeCoords = {3,3,3};
 
 
