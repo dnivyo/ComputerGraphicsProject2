@@ -22,12 +22,13 @@ public class World  implements GLEventListener{
 	private float atY = 0;
 	private float atZ = 0;
 	private float upX = 0;
-	private float upY = 1;
+	private float upY = 10;
 	private float upZ = 0;
 	private float[] angleRotate = {0.0001f,0.0001f,0};
 	private float changesY = 0.01f;
-	private ObjectLoader cube = new ObjectLoader("obj\\yellowishcube.obj");
+	private ObjectLoader cube = new ObjectLoader("obj\\monkey.obj");
 	private float[] cubeCoords = {3,3,3};
+	private float angle;
 
 
 
@@ -80,7 +81,7 @@ public class World  implements GLEventListener{
 		glu.gluPerspective(0, 1, 1, 60);
 
 		//    glu.gluLookAt(eyeX,eyeY,eyeZ,atX,atY,atZ,upX,upY,upZ);
-		glu.gluLookAt(30,30,30,
+		glu.gluLookAt(eyeX,eyeY,eyeZ,
 				atX,atY,atZ,
 				upX,upY,upZ);
 
@@ -106,12 +107,13 @@ public class World  implements GLEventListener{
 		gl.glFlush();
 		//*************************finish drawing***************************************
 		//****************************for actions***************************************
-		//eyeX = (float)Math.cos(Math.toRadians(angle))*30;
-		//eyeZ = (float)Math.sin(Math.toRadians(angle))*30;
-		//angle++;
-		if(Math.abs(eyeY) > 30)
-			changesY = -changesY;
-		eyeY+=changesY;
+		eyeX = (float)Math.cos(Math.toRadians(angle))*30;
+		eyeZ = (float)Math.sin(Math.toRadians(angle))*30;
+		
+		angle += 0.01;
+//		if(Math.abs(eyeY) > 30)
+//			changesY = -changesY;
+//		eyeY+=changesY;
 	}
 	//	X=cosøy*cosøz*x - sinøz*y + sinøy*z
 	//	Y=sinøz*x + cosøx*cosøz*y - sinøx*z
