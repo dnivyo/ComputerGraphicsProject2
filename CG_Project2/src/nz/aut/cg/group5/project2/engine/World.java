@@ -26,7 +26,7 @@ public class World  implements GLEventListener{
 	private float upZ = 0;
 	private float[] angleRotate = {0.0001f,0.0001f,0};
 	private float changesY = 0.01f;
-	private ObjectLoader cube = new ObjectLoader("obj\\monkey.obj");
+	private ObjectLoader cube = new ObjectLoader("obj\\humanoid.obj");
 	private float[] cubeCoords = {3,3,3};
 	private float angle;
 
@@ -102,6 +102,7 @@ public class World  implements GLEventListener{
 		gl.glVertex3f(0, 0, 0);
 		gl.glVertex3f(0, 0, 10);
 		gl.glEnd();
+		//gl.glBegin(GL.GL_POLYGON_STIPPLE);
 		cube.DrawModel(gl);
 		cubeCoords = rotate(cubeCoords, angleRotate);
 		gl.glFlush();
